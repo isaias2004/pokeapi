@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.like{
+    width: 20%;
+}
+
+.contain-buscador{
+    display: block;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.contain-buscador input{
+    padding: 10px;
+}
+
+.contain-buscador button{
+    border: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.App{
+    font-family: sans-serif;
+    text-align: center;
+}
