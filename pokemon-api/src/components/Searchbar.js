@@ -4,6 +4,7 @@ const {useState} = React;
 
 const Searchbar = () => {
     const [search, setSearch] = useState("");
+    const [pokemon, setPokemon] = useState();
 
     const onChange = (e) => {
         setSearch(e.target.value);
@@ -11,22 +12,19 @@ const Searchbar = () => {
 
     const onClick = async (e) => {
         const data = await searchPokemon(search);
-        console.log(data)
+        setPokemon(data);
     };
 
    return (
-    <div>
+    <div className="searchbar-contain">
         <div className="contain-buscador">
-            <input 
-                placeholder="Buscar pókemon..."
-                onChange={onChange}
-            />
+            <input placeholder="Buscar pokemon..." onChange={onChange}/>
     </div>
-        <div>
+        <div className="contain-button">
             <button onClick={onClick}>Buscar</button>
         </div>
     </div>
-  )
-}
+  );
+};
 
 export default Searchbar;
