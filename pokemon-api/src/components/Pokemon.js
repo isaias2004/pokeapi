@@ -2,6 +2,9 @@ import React from 'react'
 
 const Pokemon = (props) => {
     const {pokemon} = props;
+    const redHeart= '&#10084;&#65039;';
+    const blackHeart= '🖤'
+;
   return (
         <div className='pokemon-card'>
             <div className='card'>
@@ -19,9 +22,11 @@ const Pokemon = (props) => {
                             return <div key={idx} className="pokemon-type-name">{type.type.name}</div>;
                         })}
                     </div>
-                    <div>
-                    &#10084;&#65039;
-                    </div>
+                    <button>
+                        <div>
+                        {blackHeart}
+                        </div>
+                    </button>
                 </div>
             </div>
         </div>  
