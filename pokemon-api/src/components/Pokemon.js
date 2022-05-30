@@ -3,11 +3,11 @@ import FavoriteContext from '../contexts/favoritesContext';
 
 const Pokemon = (props) => {
     const {pokemon} = props;
-    const {favoritePokemons} = useContext(FavoriteContext);
+    const {favoritePokemons, updateFavoritePokemons} = useContext(FavoriteContext);
 
     const redHeart= '❤️';
     const blackHeart= '🖤'
-    const heart = favoritePokemons.includes(pokemon.name) ? redHeart : blackHeart;;
+    const heart = favoritePokemons.includes(pokemon.name) ? redHeart : blackHeart;
 
     const clickHeart = (e) => {
         e.preventDefault();
@@ -18,7 +18,8 @@ const Pokemon = (props) => {
         <div className='pokemon-card'>
             <div className='card'>
                 <div>
-                    <img src={pokemon.sprites.front_default}
+                    <img 
+                    src={pokemon.sprites.front_default}
                     alt={pokemon.name} />
                 </div>
                 <div className='nombre'>

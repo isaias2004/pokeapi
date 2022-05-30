@@ -57,6 +57,7 @@ nav {
     border-radius: 10px;
     color: white;
     height: 54px;
+    cursor: pointer;
 }
 
 .header {
@@ -135,6 +136,11 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.notFound{
+    margin-top: 50px;
+    font-size: 3em;
 }
 
 .loading {

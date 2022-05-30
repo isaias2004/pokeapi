@@ -1,16 +1,17 @@
 import React from 'react'
 
 const Pagination = (props) => {
-
+    const leftImage = 'https://www.grupojmartinez.com/images/ver-buttoni.png'
+    const rightImage = 'https://www.grupojmartinez.com/images/ver-buttond.png'
     const {onLeftClick, onRightClick, page, totalPages} = props;
   return (
     <div className='pagination'>
         <button onClick={onLeftClick}>
-            <div>Left</div>
+            <img src={leftImage} width="15px"></img>
             </button>
         <div>{page} de {totalPages}</div>
         <button onClick={onRightClick}>
-            <div>Right</div>
+            <img src={rightImage} width="15px"></img>
             </button>
     </div>
   );
